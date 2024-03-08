@@ -2,4 +2,4 @@
 # rc2-template-proyecto-individual-final
 #BOTICA NATURAL
 ### App de plantas medicinales y remedios
-Dirigida a personas interesadas en la medicina natural y buscan alivio natural a dolencias comunes y de poca gravedad(dolores decabeza, estres, insomnio, problemas digestivos etc.)
+Dirigida a personas interesadas en la medicina natural y que buscan alivio natural a dolencias comunes y de poca gravedad(dolores decabeza, estres, insomnio, problemas digestivos etc.)
