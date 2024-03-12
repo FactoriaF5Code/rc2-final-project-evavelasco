@@ -7,6 +7,3 @@
 ### App de plantas medicinales y remedios
 
 Dirigida a personas interesadas en la medicina natural y que buscan alivio natural a dolencias comunes y de poca gravedad(dolores decabeza, estres, insomnio, problemas digestivos etc.)
-
-[ [!Figma ] ( https://www.figma.com/file/pFS4dOi9VClt0bGoO8JxDG/Plantas-medicinales?type=design&node-id=43-20&mode=design&t=VGr6pNNr9b4cMTlr-0 )]
-[ [!Trello ] ( https://trello.com/b/tV5SGBOo/plantas-medicinales )]
