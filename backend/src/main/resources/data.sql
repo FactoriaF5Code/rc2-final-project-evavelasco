@@ -1,3 +1,4 @@
+CREATE TABLE plantas(id INT AUTO_INCREMENT PRIMARY KEY,nombre VARCHAR(100), propiedades VARCHAR(100));
 INSERT INTO plantas (nombre, propiedades) VALUES 
 ('Ortiga', 'hierro, calcio, vitamina C y clorofila.'),
 ('Diente de león', 'diurético, depurativo y rico en antioxidantes.'),
@@ -26,6 +27,6 @@ INSERT INTO plantas (nombre, propiedades) VALUES
 ('Lavanda', 'relajante y ayuda a calmar la ansiedad.'),
 ('Nepetia cataria', 'calmante y se usa para problemas digestivos.'),
 ('Romero', 'estimulantes y antioxidantes.'),
-('Anís verde', 'digestivo y carminativo.');
+('Anís verde', 'digestivo y carminativo.'),
 ('Malvavisco', 'calmante y ayuda a aliviar irritaciones en la garganta y el tracto digestivo.'),
-('Hoja de nogal', 'antiparasitarias,antiinflamatorias y antioxidantes') 
+('Hoja de nogal', 'antiparasitarias,antiinflamatorias y antioxidantes'); 
