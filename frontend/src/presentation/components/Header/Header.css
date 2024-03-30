@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--high-light-color);
+}
+
+button {
+  background-color: var(--background-color-light);
+  font-size: 1.5rem;
+  color: var(--background-color);
+  margin-right: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
