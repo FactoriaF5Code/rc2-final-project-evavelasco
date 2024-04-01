@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CardsPlantas from "../components/Cards/CardsPlantas";
 
 export const PlantasPage = () => {
   const [plantas, setPlantas] = useState([]);
+  const [cartaVolteada, setCartaVolteada] = useState(null);
 
   useEffect(() => {
     axios
@@ -15,8 +17,6 @@ export const PlantasPage = () => {
       });
   }, []);
 
-  const [cartaVolteada, setCartaVolteada] = useState(null);
-
   const handleVoltearCarta = (index) => {
     setCartaVolteada(index === cartaVolteada ? null : index);
   };
@@ -25,22 +25,12 @@ export const PlantasPage = () => {
     <main>
       <div className="plantas-grid">
         {plantas.map((planta, index) => (
-          <div
+          <CardsPlantas
             key={planta.id}
-            className="planta-card"
-            onClick={() => handleVoltearCarta(index)}
-          >
-            {cartaVolteada === index ? (
-              <div>
-                <p>{planta.propiedades}</p>
-              </div>
-            ) : (
-              <div>
-                <img src={planta.imagen} alt={planta.nombre} />
-                <h2>{planta.nombre}</h2>
-              </div>
-            )}
-          </div>
+            planta={planta}
+            onFlip={() => handleVoltearCarta(index)}
+            isFlipped={cartaVolteada === index}
+          />
         ))}
       </div>
     </main>

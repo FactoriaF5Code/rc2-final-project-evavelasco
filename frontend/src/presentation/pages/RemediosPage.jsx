@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CardsRemedios from "../components/Cards/CardsRemedios";
 
 export const RemediosPage = () => {
   const [remedios, setRemedios] = useState([]);
@@ -25,22 +26,12 @@ export const RemediosPage = () => {
     <main>
       <div className="remedios-grid">
         {remedios.map((remedio, index) => (
-          <div
+          <CardsRemedios
             key={remedio.id}
-            className="remedio-card"
-            onClick={() => handleVoltearCarta(index)}
-          >
-            {cartaVolteada === index ? (
-              <div>
-                <p>Receta: {remedio.receta}</p>
-              </div>
-            ) : (
-              <div>
-                <h2>{remedio.dolencia}</h2>
-                <p>Plantas utilizadas: {remedio.plantasUtilizadas}</p>
-              </div>
-            )}
-          </div>
+            remedio={remedio}
+            onFlip={() => handleVoltearCarta(index)}
+            isFlipped={cartaVolteada === index}
+          />
         ))}
       </div>
     </main>

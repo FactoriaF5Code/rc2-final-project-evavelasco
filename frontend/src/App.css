@@ -1,0 +1,6 @@
+body {
+  background: url("../public/assets/fondobotica.jpg");
+  background-size: cover;
+  opacity: 0rem;
+  height: 100vh;
+}

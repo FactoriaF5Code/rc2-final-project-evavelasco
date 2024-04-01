@@ -2,14 +2,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--high-light-color);
 }
 
 button {
-  background-color: var(--background-color-light);
+  cursor: pointer;
+  background-color: #4f7a4f;
   font-size: 1.5rem;
-  color: var(--background-color);
+  font-family: "Dancing Script", cursive;
+  color: white;
   margin-right: 2rem;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
+}
+button:active {
+  transform: scale(0.95);
+}
+img {
+  display: flex;
+
+  width: 10rem;
+  height: 10rem;
 }
