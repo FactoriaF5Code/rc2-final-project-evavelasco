@@ -1,16 +1,16 @@
 h1 {
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
-  font-family: "Dancing Script", cursive;
-
+  font-size: 2.5rem;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
   margin-right: 2rem;
   padding: 0.5rem 1.5rem;
 }
 p {
   font-size: 1.5rem;
-  font-family: "Dancing Script", cursive;
-
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
   margin-right: 2rem;
   padding: 0.5rem 1.5rem;
 }

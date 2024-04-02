@@ -8,7 +8,7 @@ button {
   cursor: pointer;
   background-color: #4f7a4f;
   font-size: 1.5rem;
-  font-family: "Dancing Script", cursive;
+  font-family: "Indie Flower", cursive;
   color: white;
   margin-right: 2rem;
   padding: 0.5rem 1.5rem;
@@ -22,4 +22,12 @@ img {
 
   width: 10rem;
   height: 10rem;
+}
+div.titulo {
+  background-color: #4f7a4f;
+  font-size: 2rem;
+  font-family: "Indie Flower", cursive;
+  margin-right: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
 }

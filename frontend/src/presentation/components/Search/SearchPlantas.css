@@ -1,0 +1,22 @@
+.SearchPlantas {
+  margin-bottom: 20px;
+}
+
+.inputPlantas {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.buttonSearchPlantas {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4f7a4f;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}

@@ -8,6 +8,10 @@ export const Header = () => {
       <Link to="/">
         <img src={logo} alt="BOTICA NATURAL" />
       </Link>
+      <div className="titulo">
+        BUSCA EL REMEDIO PARA TUS PEQUEÑAS DOLENCIAS CON PLANTAS
+      </div>
+
       <nav>
         <Link to="/plantas">
           <button>Plantas</button>
