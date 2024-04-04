@@ -1,3 +1,5 @@
+import "./CardsRemedios.css";
+
 const CardsRemedios = ({ remedio, onFlip, isFlipped }) => {
   return (
     <div className="cardRemedio" onClick={onFlip}>

@@ -1,3 +1,5 @@
+import "./CardsPlantas.css";
+
 const CardsPlantas = ({ planta, onFlip, isFlipped }) => {
   return (
     <div className="cardPlanta" onClick={onFlip}>
@@ -7,7 +9,7 @@ const CardsPlantas = ({ planta, onFlip, isFlipped }) => {
         </div>
       ) : (
         <div>
-          <img src={planta.imagen} alt={planta.nombre} />
+          <img src={planta.foto} alt={planta.nombre} />
           <h2>{planta.nombre}</h2>
         </div>
       )}

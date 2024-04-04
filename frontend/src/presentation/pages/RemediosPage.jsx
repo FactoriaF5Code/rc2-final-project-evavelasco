@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import CardsRemedios from "../components/Cards/CardsRemedios";
 import SearchDolencias from "../components/Search/SearchDolencias";
 
@@ -10,7 +10,7 @@ export const RemediosPage = () => {
 
   useEffect(() => {
     axios
-      .get("/api/remedios")
+      .get("/api/dolencias")
       .then((response) => {
         setRemedios(response.data);
         setFiltradoRemedios(response.data);
@@ -23,7 +23,7 @@ export const RemediosPage = () => {
   const handleVoltearCarta = (index) => {
     setCartaVolteada(index === cartaVolteada ? null : index);
   };
-  const SearchDolencias = (query) => {
+  const handleSearchDolencias = (query) => {
     const filtrado = remedios.filter((remedio) =>
       remedio.dolencias.toLowerCase().includes(query.toLowerCase())
     );
@@ -33,7 +33,7 @@ export const RemediosPage = () => {
   return (
     <main>
       <div className="SearchDolencias">
-        <SearchDolencias onSearch={searchDolencias} />
+        <SearchDolencias onSearch={handleSearchDolencias} />
       </div>
       <div className="cartaRemedios">
         {filtradoRemedios.map((remedio, index) => (

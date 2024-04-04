@@ -1,11 +1,13 @@
 .searchDolencias {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: end;
 }
 
 .inputDolencias {
-  width: 200px;
+  width: 300px;
   padding: 10px;
-  border: 1px solid #ccc;
+  font-family: "Indie Flower";
   border-radius: 5px;
   margin-right: 10px;
   font-size: 16px;
@@ -13,7 +15,6 @@
 
 .buttonSearchDolencias {
   padding: 10px 20px;
-  border: none;
   border-radius: 5px;
   background-color: #4f7a4f;
   color: white;

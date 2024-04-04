@@ -17,7 +17,7 @@ const SearchPlantas = ({ onSearch }) => {
         placeholder="Introduce tu planta"
         className="inputPlantas"
       />
-      <button onClick={handleSearch} className="buttonSeachPlantas">
+      <button onClick={handleSearch} className="buttonSearchPlantas">
         Buscar
       </button>
     </div>
