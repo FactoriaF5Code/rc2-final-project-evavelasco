@@ -1,4 +1,4 @@
-package com.boticaverde.persistence;
+package com.boticaverde.backend.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

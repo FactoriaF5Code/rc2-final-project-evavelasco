@@ -1,4 +1,4 @@
-package com.boticaverde.persistence;
+package com.boticaverde.backend.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +12,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.ArrayList;
+
+import java.util.Set;
 
 @Getter
 @Setter
@@ -28,7 +29,7 @@ public class Dolencias {
     private String dolencia;
     @ManyToMany
     @JoinTable(name = "dolencia_planta", joinColumns = @JoinColumn(name = "dolencia_id"), inverseJoinColumns = @JoinColumn(name = "planta_id"))
-    private ArrayList<Plantas> plantas;
+    private Set<Plantas> plantas;
     private String receta;
 
 }

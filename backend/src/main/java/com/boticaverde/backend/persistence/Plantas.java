@@ -1,4 +1,4 @@
-package com.boticaverde.persistence;
+package com.boticaverde.backend.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.ArrayList;
+
+import java.util.Set;
 
 @Getter
 @Setter
@@ -25,7 +26,7 @@ public class Plantas {
     private Long id;
     private String nombre;
     @ManyToMany(mappedBy = "plantas")
-    private ArrayList<Dolencias> dolencias;
+    private Set<Dolencias> dolencias;
     private String propiedades;
     private byte[] foto;
 

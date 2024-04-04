@@ -1,10 +1,11 @@
-package com.boticaverde.controllers;
-
-import com.boticaverde.persistence.Plantas;
+package com.boticaverde.backend.controllers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import java.util.ArrayList;
+
+import java.util.Set;
+
+import com.boticaverde.backend.persistence.Plantas;
 
 @Getter
 @AllArgsConstructor
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 public class DolenciasResponse {
     private Long id;
     private String dolencia;
-    private ArrayList<Plantas> plantas;
+    private Set<Plantas> plantas;
     private String receta;
 
 }

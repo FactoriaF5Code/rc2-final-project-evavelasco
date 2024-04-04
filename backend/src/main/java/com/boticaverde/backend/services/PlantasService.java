@@ -1,4 +1,4 @@
-package com.boticaverde.services;
+package com.boticaverde.backend.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.boticaverde.controllers.PlantasResponse;
-import com.boticaverde.persistence.Plantas;
-import com.boticaverde.persistence.PlantasRepository;
+import com.boticaverde.backend.controllers.PlantasResponse;
+import com.boticaverde.backend.persistence.Plantas;
+import com.boticaverde.backend.persistence.PlantasRepository;
 
 @Service
 public class PlantasService {
