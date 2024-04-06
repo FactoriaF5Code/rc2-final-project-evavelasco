@@ -7,12 +7,16 @@ export const PlantasPage = () => {
   const [plantas, setPlantas] = useState([]);
   const [cartaVolteada, setCartaVolteada] = useState(null);
   const [plantasFiltradas, setPlantasFiltradas] = useState([]);
+  const PlantasPorPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/plantas")
       .then((response) => {
         setPlantas(response.data);
+        setTotalPages(Math.ceil(response.data.length / PlantasPorPage));
         console.log(response);
         setPlantasFiltradas(response.data);
       })
@@ -29,6 +33,15 @@ export const PlantasPage = () => {
       planta.nombre.toLowerCase().includes(query.toLowerCase())
     );
     setPlantasFiltradas(plantasFiltradas);
+    setCurrentPage(1);
+  };
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+  const getPaginatedData = () => {
+    const startIndex = (currentPage - 1) * PlantasPorPage;
+    const endIndex = startIndex + plantasPorPage;
+    return plantasFiltradas.slice(startIndex, endIndex);
   };
 
   return (
@@ -46,6 +59,26 @@ export const PlantasPage = () => {
           />
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="pagination">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            Anterior
+          </button>
+          <span>
+            Página {currentPage} de {totalPages}
+          </span>
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Siguiente
+          </button>
+        </div>
+      )}
     </main>
   );
 };

@@ -1,9 +1,8 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PlantasPage } from "../../presentation/pages/PlantasPage";
-import { RemediosPage } from "../../presentation/pages/RemediosPage";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { Header } from "../../presentation/components/Header/Header";
 import { HomePage } from "../../presentation/pages/HomePage";
-import { Outlet } from "react-router-dom";
+import { PlantasPage } from "../../presentation/pages/PlantasPage";
+import { RemediosPage } from "../../presentation/pages/RemediosPage";
 
 export const AppRouter = () => {
   return (
