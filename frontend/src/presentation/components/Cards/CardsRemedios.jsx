@@ -1,28 +1,8 @@
 import "./CardsRemedios.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const CardsRemedios = ({ remedio, onFlip }) => {
+const CardsRemedios = ({ remedio, onFlip, imagenUrl }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  useEffect(() => {
-    const card = document.querySelector(".cardRemedio");
-
-    const handleMouseOver = () => {
-      card.style.transform = "scale(1)";
-    };
-
-    const handleMouseOut = () => {
-      card.style.transform = "scale(1)";
-    };
-
-    card.addEventListener("mouseover", handleMouseOver);
-    card.addEventListener("mouseout", handleMouseOut);
-
-    return () => {
-      card.removeEventListener("mouseover", handleMouseOver);
-      card.removeEventListener("mouseout", handleMouseOut);
-    };
-  }, []);
 
   const handleFlip = () => {
     setIsFlipped((prev) => !prev);
@@ -32,13 +12,19 @@ const CardsRemedios = ({ remedio, onFlip }) => {
     <div
       className={`cardRemedio ${isFlipped ? "flip" : ""}`}
       onClick={handleFlip}
+      style={{
+        backgroundImage: `url(${imagenUrl})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        opacity: 1,
+      }}
     >
       {isFlipped ? (
-        <div>
+        <div className="back">
           <p>Receta: {remedio.receta}</p>
         </div>
       ) : (
-        <div>
+        <div className="front">
           <h2>{remedio.dolencia}</h2>
           <p>Plantas utilizadas: {remedio.plantasUtilizadas}</p>
         </div>

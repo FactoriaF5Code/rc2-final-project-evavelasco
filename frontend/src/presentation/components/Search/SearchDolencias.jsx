@@ -5,7 +5,9 @@ const SearchDolencias = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleSearch = () => {
-    onSearch(query);
+    if (query.trim() !== "") {
+      onSearch(query.trim());
+    }
   };
 
   return (

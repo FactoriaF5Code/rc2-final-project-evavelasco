@@ -1,7 +1,7 @@
 body {
   background: url("../public/assets/fondobotica.jpg");
   background-size: cover;
-  opacity: 0, 8;
+  opacity: 1;
   height: 100vh;
 }
 @media screen and (max-width: 768px) {

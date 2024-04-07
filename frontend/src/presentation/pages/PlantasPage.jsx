@@ -40,7 +40,7 @@ export const PlantasPage = () => {
   };
   const getPaginatedData = () => {
     const startIndex = (currentPage - 1) * PlantasPorPage;
-    const endIndex = startIndex + plantasPorPage;
+    const endIndex = startIndex + PlantasPorPage;
     return plantasFiltradas.slice(startIndex, endIndex);
   };
 
@@ -68,9 +68,7 @@ export const PlantasPage = () => {
           >
             Anterior
           </button>
-          <span>
-            Página {currentPage} de {totalPages}
-          </span>
+
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}

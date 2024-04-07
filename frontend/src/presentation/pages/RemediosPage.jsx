@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CardsRemedios from "../components/Cards/CardsRemedios";
 import SearchDolencias from "../components/Search/SearchDolencias";
-
+import imagenRemedio from "../../../public/assets/taza.jpeg";
 export const RemediosPage = () => {
   const [remedios, setRemedios] = useState([]);
   const [filtradoRemedios, setFiltradoRemedios] = useState([]);
@@ -40,7 +40,7 @@ export const RemediosPage = () => {
   const getPaginatedData = () => {
     const startIndex = (currentPage - 1) * RemediosPorPage;
     const endIndex = startIndex + RemediosPorPage;
-    return plantasFiltradas.slice(startIndex, endIndex);
+    return filtradoRemedios.slice(startIndex, endIndex);
   };
 
   return (
@@ -49,12 +49,13 @@ export const RemediosPage = () => {
         <SearchDolencias onSearch={handleSearchDolencias} />
       </div>
       <div className="cartaRemedios">
-        {filtradoRemedios.map((remedio, index) => (
+        {getPaginatedData().map((remedio, index) => (
           <CardsRemedios
             key={remedio.id}
             remedio={remedio}
             onFlip={() => handleVoltearCarta(index)}
             isFlipped={cartaVolteada === index}
+            imagenUrl={imagenRemedio}
           />
         ))}
       </div>
@@ -67,9 +68,7 @@ export const RemediosPage = () => {
           >
             Anterior
           </button>
-          <span>
-            Página {currentPage} de {totalPages}
-          </span>
+
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
