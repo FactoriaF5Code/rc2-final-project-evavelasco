@@ -16,9 +16,11 @@ Dirigida a personas interesadas en la medicina natural y que buscan alivio natur
 
 # Instalaciones
 ##Repository
-git init
+
+``git init``
 
 #Frontend
+
 ``npm init vite frontend``
 ``npm install``
  ``npm run dev ``
