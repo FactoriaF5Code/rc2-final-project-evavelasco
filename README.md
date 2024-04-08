@@ -25,6 +25,7 @@ git init
 ``npm install --save-dev jest @testing-library/react @testing-library/jest-dom``
 
 #Backend
+
 En barra superior Visual Studio Code
 >Spring Initializr:Create Maven Project
 Spring Version:3.2.1
@@ -37,6 +38,7 @@ Spring web
 H2 Database
 Spring Boot Dev Tools
 Spring Data JPA
+
 ``./mwnw spring-boot:run``
 
 # Planificación
