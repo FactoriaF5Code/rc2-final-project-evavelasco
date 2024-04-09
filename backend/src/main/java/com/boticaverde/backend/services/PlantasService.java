@@ -21,7 +21,7 @@ public class PlantasService {
         List<Plantas> plantasInDataBasePlantas = plantasRepository.findAll();
         for (Plantas planta : plantasInDataBasePlantas) {
             plantas.add(new PlantasResponse(planta.getId(), planta.getNombre(), planta.getDolencias(),
-                    planta.getPropiedades(), planta.getFoto()));
+                    planta.getPropiedades(), planta.getFoto_url()));
         }
         return plantas;
     }

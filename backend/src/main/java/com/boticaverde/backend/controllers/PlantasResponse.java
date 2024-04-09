@@ -15,6 +15,6 @@ public class PlantasResponse {
     private String nombre;
     private Set<Dolencias> dolencias;
     private String propiedades;
-    private byte[] foto;
+    private String foto_url;
 
 }

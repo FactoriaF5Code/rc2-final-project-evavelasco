@@ -28,6 +28,6 @@ public class Plantas {
     @ManyToMany(mappedBy = "plantas")
     private Set<Dolencias> dolencias;
     private String propiedades;
-    private byte[] foto;
+    private String foto_url;
 
 }
