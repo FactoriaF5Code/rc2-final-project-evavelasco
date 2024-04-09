@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CardsRemedios from "../components/Cards/CardsRemedios";
 import SearchDolencias from "../components/Search/SearchDolencias";
-import imagenRemedio from "../../../public/assets/taza.jpeg";
+import imagenRemedio from "../../../public/assets/tazare.jpeg";
+
 export const RemediosPage = () => {
   const [remedios, setRemedios] = useState([]);
   const [filtradoRemedios, setFiltradoRemedios] = useState([]);
@@ -28,10 +29,10 @@ export const RemediosPage = () => {
     setCartaVolteada(index === cartaVolteada ? null : index);
   };
   const handleSearchDolencias = (query) => {
-    const filtrado = remedios.filter((remedio) =>
+    const filtradoRemedios = remedios.filter((remedio) =>
       remedio.dolencias.toLowerCase().includes(query.toLowerCase())
     );
-    setFiltradoRemedios(filtrado);
+    setFiltradoRemedios(filtradoRemedios);
     setCurrentPage(1);
   };
   const handlePageChange = (pageNumber) => {
@@ -55,7 +56,7 @@ export const RemediosPage = () => {
             remedio={remedio}
             onFlip={() => handleVoltearCarta(index)}
             isFlipped={cartaVolteada === index}
-            imagenUrl={imagenRemedio}
+            imagenRemedio={imagenRemedio}
           />
         ))}
       </div>

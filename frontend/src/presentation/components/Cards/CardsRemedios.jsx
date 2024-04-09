@@ -1,7 +1,7 @@
 import "./CardsRemedios.css";
 import { useState } from "react";
 
-const CardsRemedios = ({ remedio, onFlip, imagenUrl }) => {
+const CardsRemedios = ({ remedio, onFlip, imagenRemedio }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -13,7 +13,7 @@ const CardsRemedios = ({ remedio, onFlip, imagenUrl }) => {
       className={`cardRemedio ${isFlipped ? "flip" : ""}`}
       onClick={handleFlip}
       style={{
-        backgroundImage: `url(${imagenUrl})`,
+        backgroundImage: `url(${imagenRemedio})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         opacity: 1,

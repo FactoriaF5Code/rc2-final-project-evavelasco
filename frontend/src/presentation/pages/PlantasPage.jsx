@@ -50,7 +50,7 @@ export const PlantasPage = () => {
         <SearchPlantas onSearch={handleSearch} />
       </div>
       <div className="cartaPlanta">
-        {plantasFiltradas.map((planta, index) => (
+        {getPaginatedData().map((planta, index) => (
           <CardsPlantas
             key={planta.id}
             planta={planta}
