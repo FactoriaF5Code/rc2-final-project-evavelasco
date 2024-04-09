@@ -7,3 +7,10 @@
 ### App de plantas medicinales y remedios
 
 Dirigida a personas interesadas en la medicina natural y que buscan alivio natural a dolencias comunes y de poca gravedad(dolores decabeza, estres, insomnio, problemas digestivos etc.)
+npm init vite frontend
+npm install react-router-dom
+npm install axios
+npm install
+npm install --save-dev @testing-library/react @testing-library/jest-dom
+npm run dev
+./mvnw spring-boot:run
