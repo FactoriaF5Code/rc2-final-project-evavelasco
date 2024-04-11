@@ -58,25 +58,25 @@ INSERT INTO plantas (nombre, propiedades,foto_url) VALUES
 ('BREZO','diurética, antiséptica, antiinflamatoria','https://www.lifeder.com/wp-content/uploads/2019/04/brezo-1.jpg'),
 ('ROMPEPIEDRAS','diurética, antiinflamatoria','https://www.casapia.com/blog/wp-content/uploads/2022/08/lepidium-latifolium-rompepiedras.png');
 
- CREATE TABLE dolencias(id INT AUTO_INCREMENT PRIMARY KEY,dolencia VARCHAR(100), receta VARCHAR(250));
-INSERT INTO dolencias (dolencia, receta) VALUES 
-('GOTA','2-3 vasos de infusión al dia'),
-('ALERGIAS', '3-4 vasos de infusión al dia'),
-('DIGESTION', 'Infusiones después de las comidas excesivas'),
-('HALITOSIS', '2 vasos de infusión al dia'),
-('INFECCION ORINA', '3 vasos de infusión al dia'),
-('INCONTINENCIA URINARIA', '1-2 vasos de infusión al dia, no tomar antes del atardecer'),
-('MENSTRUACION DOLOROSA', '2 vasos de infusión al dia, empezar 7 dias antes de la regla y durante la misma'),
-('RESFRIADO 1','2-3 vasos de infusión al dia'),
-('RESFRIADO 2','2-3 vasos de infusión al dia'),
-('INSOMNIO','1-2 vasos de infusión 45 minutos antes de ir a dormir'),
-('ASMA','3 vasos de infusión al dia'),
-('DOLOR CABEZA','2 tazas de infusion al dia'),
-('ANEMIA', '2-3 vasos de infusión al dia'),
-('COLESTEROL', '2-3 vasos de infusión al dia'),
-('HIGADO GRASO','2-3 vasos de infusión al dia'),
-('PSORIASIS', '1,5-2 litros de infusión caliente a lo largo del dia '),
-('LUMBAGO','3 tacitas al dia templada, antes de las comidas durante 60 dias'),
-('TOS', '2 vasitos caliente mañana y noche'),
-('DIARREA','Tomar a sorbos durante todo el dia'),
-('CALCULOS RENALES', '1-2 vasitos al dia');
+ CREATE TABLE dolencias(id INT AUTO_INCREMENT PRIMARY KEY,dolencia VARCHAR(100),planta_id VARCHAR(25), receta VARCHAR(250));
+INSERT INTO dolencias (dolencia,planta_id, receta) VALUES 
+('GOTA','1,2,3,4','2-3 vasos de infusión al dia'),
+('ALERGIAS','5,6,7,1', '3-4 vasos de infusión al dia'),
+('DIGESTION','10,11,12,13,14,15', 'Infusiones después de las comidas excesivas'),
+('HALITOSIS','14,12,17,18','2 vasos de infusión al dia'),
+('INFECCION ORINA','9,1,16,13,4', '3 vasos de infusión al dia'),
+('INCONTINENCIA URINARIA','19,3,4', '1-2 vasos de infusión al dia, no tomar antes del atardecer'),
+('MENSTRUACION DOLOROSA','20,4', '2 vasos de infusión al dia, empezar 7 dias antes de la regla y durante la misma'),
+('RESFRIADO 1','6,9,4','2-3 vasos de infusión al dia'),
+('RESFRIADO 2','24,14,9,4','2-3 vasos de infusión al dia'),
+('INSOMNIO','30,22,19,27,33','1-2 vasos de infusión 45 minutos antes de ir a dormir'),
+('ASMA','8,9,4','3 vasos de infusión al dia'),
+('DOLOR CABEZA','26,51','2 tazas de infusion al dia'),
+('ANEMIA','2,18,1,42,31', '2-3 vasos de infusión al dia'),
+('COLESTEROL','48,18,47,2,42,41,4,37', '2-3 vasos de infusión al dia'),
+('HIGADO GRASO','43,2,44','2-3 vasos de infusión al dia'),
+('PSORIASIS','35,46,36,48,45,1,37,20', '1,5-2 litros de infusión caliente a lo largo del dia '),
+('LUMBAGO','9,52,3','3 tacitas al dia templada, antes de las comidas durante 60 dias'),
+('TOS','52,51', '2 vasitos caliente mañana y noche'),
+('DIARREA','53','Tomar a sorbos durante todo el dia'),
+('CALCULOS RENALES','54,55,5', '1-2 vasitos al dia');

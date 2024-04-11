@@ -2,7 +2,7 @@ import "./HomePage.css";
 
 export const HomePage = () => {
   return (
-    <>
+    <div className="contenedor">
       <>
         <></>
         <h1>FITOTERAPIA</h1>
@@ -43,6 +43,6 @@ export const HomePage = () => {
         (por ejemplo, hay que consultar al médico si empleamos hipérico y
         antidepresivos).
       </p>
-    </>
+    </div>
   );
 };

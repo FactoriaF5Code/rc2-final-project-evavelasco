@@ -2,10 +2,13 @@ import "./Header.css";
 import logo from "/assets/logo.png";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ onResetSearch }) => {
+  const handleReset = () => {
+    onResetSearch();
+  };
   return (
     <header>
-      <Link to="/">
+      <Link to="/" onClick={handleReset}>
         <img src={logo} alt="BOTICA NATURAL" />
       </Link>
       <div className="titulo">
@@ -13,10 +16,10 @@ export const Header = () => {
       </div>
 
       <nav>
-        <Link to="/plantas">
+        <Link to="/plantas" onClick={handleReset}>
           <button>Plantas</button>
         </Link>
-        <Link to="/remedios">
+        <Link to="/remedios" onClick={handleReset}>
           <button>Remedios</button>
         </Link>
       </nav>

@@ -26,7 +26,7 @@ const CardsRemedios = ({ remedio, onFlip, imagenRemedio }) => {
       ) : (
         <div className="front">
           <h2>{remedio.dolencia}</h2>
-          <p>Plantas utilizadas: {remedio.plantasUtilizadas}</p>
+          <p>Plantas utilizadas: {remedio.id_plantas}</p>
         </div>
       )}
     </div>
