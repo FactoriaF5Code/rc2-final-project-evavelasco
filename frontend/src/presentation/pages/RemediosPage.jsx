@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CardsRemedios from "../components/Cards/CardsRemedios";
 import SearchDolencias from "../components/Search/SearchDolencias";
-import imagenRemedio from "../../../public/assets/tazare.jpeg";
+import imagenRemedio from "../../../public/assets/taza.jpeg";
 
 export const RemediosPage = () => {
   const [remedios, setRemedios] = useState([]);
@@ -51,19 +51,15 @@ export const RemediosPage = () => {
         <SearchDolencias onSearch={handleSearchDolencias} />
       </div>
       <div className="cartaRemedios">
-        {filtradoRemedios.lenght > 0 ? (
-          getPaginatedData().map((remedio, index) => (
-            <CardsRemedios
-              key={remedio.id}
-              remedio={remedio}
-              onFlip={() => handleVoltearCarta(index)}
-              isFlipped={cartaVolteada === index}
-              imagenRemedio={imagenRemedio}
-            />
-          ))
-        ) : (
-          <p>Cargando datos....</p>
-        )}
+        {getPaginatedData().map((remedio, index) => (
+          <CardsRemedios
+            key={remedio.id}
+            remedio={remedio}
+            onFlip={() => handleVoltearCarta(index)}
+            isFlipped={cartaVolteada === index}
+            imagenRemedio={imagenRemedio}
+          />
+        ))}
       </div>
 
       {totalPages > 1 && (

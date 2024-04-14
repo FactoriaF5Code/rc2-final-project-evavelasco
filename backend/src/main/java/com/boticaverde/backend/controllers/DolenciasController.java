@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.boticaverde.backend.services.DolenciasService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("api/dolencias")
 
 public class DolenciasController {

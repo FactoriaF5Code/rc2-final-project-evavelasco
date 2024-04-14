@@ -15,7 +15,7 @@ INSERT INTO plantas (nombre, propiedades,foto_url) VALUES
 ('MENTA', 'Refrescante','https://www.sorianatural.es/storage/img/F0000002721_menta_planta_soria_natural.jpg.jpg'),
 ('SALVIA', 'Antibacteriana, antioxidante','https://www.pressenza.com/wp-content/uploads/2022/03/salvia-2.jpg'),
 ('TE DE ROCA', 'Digestivo','https://herbolariodani.com/wp-content/uploads/2013/03/product_i_m_imagen.jpg'),
-('SANTOLINA', 'Antiinflamatoria','https://plantassala.es/296-large_default/planta-aromatica-santolina.jpg'),
+('SANTOLINA', 'Antiinflamatoria','https://terragam.com/wp-content/uploads/2022/11/Flores-Santolina-Chamaecyparissus-1024x683.webp'),
 ('MARAVILLA', 'Cicatrizante, antiinflamatoria','https://portalatualizei.com.br/wp-content/uploads/2022/12/Arnica-1.png'),
 ('ANIS VERDE', 'Digestivo, carminativo','https://topfarma.es/wp-content/uploads/2022/12/art-anis.png'),
 ('ROMERO', 'Estimulante, antioxidante','https://www.sorianatural.es/storage/img/F0000002742_romero_planta_soria_natural.jpg.jpg'),

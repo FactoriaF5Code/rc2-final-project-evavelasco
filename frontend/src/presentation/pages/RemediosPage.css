@@ -1,0 +1,12 @@
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+.pagination {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
