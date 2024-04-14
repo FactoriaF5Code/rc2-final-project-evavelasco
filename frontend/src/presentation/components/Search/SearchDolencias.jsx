@@ -3,15 +3,17 @@ import "./SearchDolencias.css";
 
 const SearchDolencias = ({ onSearch }) => {
   const [query, setQuery] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     if (query.trim() !== "") {
       onSearch(query.trim());
+      setErrorMessage("");
     }
   };
-
   return (
-    <div className="searchDolencias">
+    <form className="searchDolencias" onSubmit={handleSearch}>
       <input
         type="text"
         value={query}
@@ -19,10 +21,10 @@ const SearchDolencias = ({ onSearch }) => {
         placeholder="Introduce tu dolencia"
         className="inputDolencias"
       />
-      <button onClick={handleSearch} className="buttonSearchDolencias">
+      <button type="submit" className="buttonSearchDolencias">
         Buscar
       </button>
-    </div>
+    </form>
   );
 };
 

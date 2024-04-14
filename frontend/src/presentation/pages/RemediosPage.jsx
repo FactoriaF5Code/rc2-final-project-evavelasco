@@ -30,7 +30,7 @@ export const RemediosPage = () => {
   };
   const handleSearchDolencias = (query) => {
     const filtradoRemedios = remedios.filter((remedio) =>
-      remedio.dolencias.toLowerCase().includes(query.toLowerCase())
+      remedio.dolencia.toLowerCase().includes(query.toLowerCase())
     );
     setFiltradoRemedios(filtradoRemedios);
     setCurrentPage(1);
@@ -41,6 +41,7 @@ export const RemediosPage = () => {
   const getPaginatedData = () => {
     const startIndex = (currentPage - 1) * RemediosPorPage;
     const endIndex = startIndex + RemediosPorPage;
+    console.log(filtradoRemedios);
     return filtradoRemedios.slice(startIndex, endIndex);
   };
 
@@ -50,15 +51,19 @@ export const RemediosPage = () => {
         <SearchDolencias onSearch={handleSearchDolencias} />
       </div>
       <div className="cartaRemedios">
-        {getPaginatedData().map((remedio, index) => (
-          <CardsRemedios
-            key={remedio.id}
-            remedio={remedio}
-            onFlip={() => handleVoltearCarta(index)}
-            isFlipped={cartaVolteada === index}
-            imagenRemedio={imagenRemedio}
-          />
-        ))}
+        {filtradoRemedios.lenght > 0 ? (
+          getPaginatedData().map((remedio, index) => (
+            <CardsRemedios
+              key={remedio.id}
+              remedio={remedio}
+              onFlip={() => handleVoltearCarta(index)}
+              isFlipped={cartaVolteada === index}
+              imagenRemedio={imagenRemedio}
+            />
+          ))
+        ) : (
+          <p>Cargando datos....</p>
+        )}
       </div>
 
       {totalPages > 1 && (

@@ -1,9 +1,11 @@
 .contenedor {
-  max-width: 800px;
+  max-width: 93.75rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
-  background-color: rgb(169, 215, 169);
+  background-color: rgb(169, 215, 169, 0.5);
+  position: relative;
+  border-radius: 2.5rem;
 }
 
 h1 {
@@ -14,11 +16,13 @@ h1 {
   font-weight: bold;
   margin-right: 2rem;
   padding: 0.5rem 1.5rem;
+  position: relative;
 }
 p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-family: "Indie Flower", cursive;
   font-weight: bold;
   margin-right: 2rem;
   padding: 0.5rem 1.5rem;
+  position: relative;
 }

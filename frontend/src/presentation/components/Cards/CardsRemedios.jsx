@@ -6,18 +6,20 @@ const CardsRemedios = ({ remedio, onFlip, imagenRemedio }) => {
 
   const handleFlip = () => {
     setIsFlipped((prev) => !prev);
+    console.log(remedio);
   };
 
   return (
     <div
       className={`cardRemedio ${isFlipped ? "flip" : ""}`}
       onClick={handleFlip}
-      style={{
-        backgroundImage: `url(${imagenRemedio})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        opacity: 1,
-      }}
+      // style={{
+      //   position: "relative",
+      //   backgroundImage: `url(${imagenRemedio})`,
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "cover",
+      //   opacity: 0.8,
+      // }}
     >
       {isFlipped ? (
         <div className="back">
@@ -26,7 +28,9 @@ const CardsRemedios = ({ remedio, onFlip, imagenRemedio }) => {
       ) : (
         <div className="front">
           <h2>{remedio.dolencia}</h2>
-          <p>Plantas utilizadas: {remedio.id_plantas}</p>
+          {remedio.plantas.map((planta) => (
+            <p key={planta.id}> {planta.nombre}</p>
+          ))}
         </div>
       )}
     </div>

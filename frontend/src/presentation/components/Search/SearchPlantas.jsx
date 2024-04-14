@@ -12,11 +12,6 @@ const SearchPlantas = ({ onSearch }) => {
       setErrorMessage("");
     }
   };
-  // const handleKeyDown = (e) => {
-  //   if (e.Key === "Enter") {
-  //     handleSearch();
-  //   }
-  // };
 
   return (
     <form className="searchPlantas" onSubmit={handleSearch}>
@@ -24,7 +19,6 @@ const SearchPlantas = ({ onSearch }) => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        // onKeyDown={handleKeyDown}
         placeholder="Introduce tu planta"
         className="inputPlantas"
       />
