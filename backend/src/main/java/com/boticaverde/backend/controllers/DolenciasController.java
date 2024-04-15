@@ -12,7 +12,7 @@ import com.boticaverde.backend.services.DolenciasService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
-@RequestMapping("api/dolencias")
+@RequestMapping("/api/dolencias")
 
 public class DolenciasController {
     @Autowired
@@ -20,6 +20,7 @@ public class DolenciasController {
 
     @GetMapping
     public List<DolenciasResponse> getAllDolencias() {
+
         return dolenciasService.getAllDolencias();
     }
 }

@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -20,16 +18,17 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "dolencias")
+@Table(name = "plantas")
 
-public class Dolencias {
+public class Plant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String dolencia;
+    private String nombre;
+
     @ManyToMany
-    @JoinTable(name = "dolencia_planta", joinColumns = @JoinColumn(name = "dolencia_id"), inverseJoinColumns = @JoinColumn(name = "planta_id"))
-    private Set<Plantas> plantas;
-    private String receta;
+    private Set<Dolencia> dolencias;
+    private String propiedades;
+    private String foto_url;
 
 }
