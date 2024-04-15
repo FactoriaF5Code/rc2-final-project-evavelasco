@@ -1,12 +1,15 @@
 .cartaRemedios {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    margin: 0 20px;
 }
 
 article.remedio {
-    width: 350px;
-    height: 300px;
+
+    width: 235px;
+    height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -14,6 +17,7 @@ article.remedio {
     flex-direction: column;
     align-items: flex-start;
     color: white;
+    padding: 1em;
 }
 
 article.remedio:hover {

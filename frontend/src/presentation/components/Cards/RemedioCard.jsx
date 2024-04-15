@@ -26,7 +26,7 @@ const RemedioCard = ({ remedio, onFlip, imagenRemedio}) => {
                 </div>
             ) : (
                 <div className="front">
-                    <h2>{dolencia}</h2>
+                    <p>{dolencia}</p>
                     {plantas.map((planta) => (
                         <p key={planta.id}> {planta.nombre}</p>
                     ))}
