@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.boticaverde.backend.controllers.DolenciasResponse;
-import com.boticaverde.backend.persistence.Dolencias;
+import com.boticaverde.backend.persistence.Dolencia;
 import com.boticaverde.backend.persistence.DolenciasRepository;
 
 @Service
@@ -18,8 +18,8 @@ public class DolenciasService {
 
     public List<DolenciasResponse> getAllDolencias() {
         List<DolenciasResponse> dolencias = new ArrayList<DolenciasResponse>();
-        List<Dolencias> dolenciasFromDataBase = dolenciasRepository.findAll();
-        for (Dolencias dolencia : dolenciasFromDataBase) {
+        List<Dolencia> dolenciaFromDataBase = dolenciasRepository.findAll();
+        for (Dolencia dolencia : dolenciaFromDataBase) {
             DolenciasResponse response = new DolenciasResponse(
                     dolencia.getId(),
                     dolencia.getDolencia(),

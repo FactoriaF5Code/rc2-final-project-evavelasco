@@ -5,7 +5,7 @@ import lombok.Getter;
 
 import java.util.Set;
 
-import com.boticaverde.backend.persistence.Plantas;
+import com.boticaverde.backend.persistence.Plant;
 
 @Getter
 @AllArgsConstructor
@@ -13,7 +13,7 @@ import com.boticaverde.backend.persistence.Plantas;
 public class DolenciasResponse {
     private Long id;
     private String dolencia;
-    private Set<Plantas> plantas;
+    private Set<Plant> plantas;
     private String receta;
 
 }
