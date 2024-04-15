@@ -1,0 +1,50 @@
+.cartaRemedios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+article.remedio {
+    width: 350px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+article.remedio:hover {
+    background-color: #404040;
+    background-blend-mode: multiply;
+    transform: scale(1.1);
+}
+
+
+/*@media screen and (min-width: 320px) and (max-width: 768px) {*/
+/*    .cardRemedio {*/
+/*        width: calc(100%-1.25rem);*/
+/*        margin-right: 0.625rem;*/
+/*        margin-bottom: 0.625rem;*/
+/*        font-size: var(--font-size-mobile);*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width: 769px) and (max-width: 1024px) {*/
+/*    .cardRemedio {*/
+/*        width: calc(50%-1.25rem);*/
+/*        margin-right: 0.625rem;*/
+/*        margin-bottom: 0.625rem;*/
+/*        font-size: var(--font-size-tablet);*/
+/*    }*/
+/*}*/
+/*@media screen and(min-width: 1025px) {*/
+/*    .cardRemedio {*/
+/*        width: calc(33%-1.25rem);*/
+/*        margin-right: 0.625rem;*/
+/*        margin-bottom: 0.625rem;*/
+/*        font-size: var(--font-size-desktop);*/
+/*    }*/
+/*}*/

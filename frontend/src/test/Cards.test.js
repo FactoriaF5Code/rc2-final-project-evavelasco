@@ -1,5 +1,5 @@
 import CardsPlantas from "../presentation/components/Cards/CardsPlantas";
-import CardsRemedios from "../presentation/components/Cards/CardsRemedios";
+import RemedioCard from "../presentation/components/Cards/RemedioCard.jsx";
 import { render, fireEvent, getByText } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
@@ -10,7 +10,7 @@ describe("CardsRemedios",()=>{
         id_Plantas:"ortiga,cola de caballo,diente de león, stevia",};
         const onFlip =jest.fn();
         const {getByText, getByRole}= render(
-            <CardsRemedios remedio={remedio}onFlip recetaRemedio={recetaRemedio}/>
+            <RemedioCard remedio={remedio} onFlip recetaRemedio={recetaRemedio}/>
         );
         it("trae la informacion del reverso cuando clicko",=>{
             const CardsRemedios=getByRole("buttom");
