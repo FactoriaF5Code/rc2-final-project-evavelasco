@@ -7,7 +7,7 @@ export const PlantasPage = () => {
   const [plantas, setPlantas] = useState([]);
   const [cartaVolteada, setCartaVolteada] = useState(null);
   const [plantasFiltradas, setPlantasFiltradas] = useState([]);
-  const PlantasPorPage = 10;
+  const PlantasPorPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 

@@ -18,7 +18,7 @@ const CardsPlantas = ({ planta, onFlip }) => {
           <p>{planta.propiedades}</p>
         </div>
       ) : (
-        <div className="front">
+        <div className="frontPlanta">
           <img className="hierbas" src={planta.foto_url} alt={planta.nombre} />
           <h2>{planta.nombre}</h2>
         </div>

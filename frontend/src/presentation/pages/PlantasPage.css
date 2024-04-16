@@ -1,12 +1,13 @@
-main {
+/* main {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 body {
   margin-left: 10rem;
-}
+} */
 .pagination {
+  position: absolute;
   position: fixed;
   bottom: 0;
   left: 0;

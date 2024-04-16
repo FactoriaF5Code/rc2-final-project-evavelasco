@@ -18,12 +18,21 @@
   box-shadow: 0.625rem 0.625rem 0.625rem rgb(40, 154, 19);
   cursor: pointer;
 }
+.cartaPlanta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 20px;
+}
+.frontPlanta {
+  justify-content: center;
+  align-items: center;
+}
 
 .cardPlanta:hover {
   transform: scale(1.1);
 }
 img.hierbas {
-  /* width: 100%;
-  height: auto; */
   border-radius: 15px;
 }
