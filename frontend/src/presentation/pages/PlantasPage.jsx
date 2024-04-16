@@ -10,7 +10,8 @@ export const PlantasPage = () => {
   const PlantasPorPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-
+ 
+  const [busquedaActiva, setBusquedaActiva] = useState(false);
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/plantas")
@@ -34,7 +35,10 @@ export const PlantasPage = () => {
     );
     setPlantasFiltradas(plantasFiltradas);
     setCurrentPage(1);
+    setBusquedaActiva(true);
+    setNombrePlanta("");
   };
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -60,7 +64,7 @@ export const PlantasPage = () => {
         ))}
       </div>
 
-      {totalPages > 1 && (
+      {!busquedaActiva && totalPages > 1 && (
         <div className="pagination">
           <button
             onClick={() => handlePageChange(currentPage - 1)}

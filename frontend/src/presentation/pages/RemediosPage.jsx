@@ -11,6 +11,9 @@ export const RemediosPage = () => {
   const RemediosPorPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+
+  const [busquedaActiva, setBusquedaActiva] = useState(false);
+
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/dolencias")
@@ -34,6 +37,8 @@ export const RemediosPage = () => {
     );
     setFiltradoRemedios(filtradoRemedios);
     setCurrentPage(1);
+    setBusquedaActiva(true);
+    setNombreDolencia("");
   };
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -62,7 +67,7 @@ export const RemediosPage = () => {
         ))}
       </div>
 
-      {totalPages > 1 && (
+      {!busquedaActiva && totalPages > 1 && (
         <div className="pagination">
           <button
             onClick={() => handlePageChange(currentPage - 1)}

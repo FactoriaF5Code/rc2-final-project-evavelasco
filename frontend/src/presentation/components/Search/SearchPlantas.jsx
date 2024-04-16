@@ -3,13 +3,12 @@ import "./SearchPlantas.css";
 
 const SearchPlantas = ({ onSearch }) => {
   const [query, setQuery] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim() !== "") {
       onSearch(query.trim());
-      setErrorMessage("");
+      setQuery("");
     }
   };
 
