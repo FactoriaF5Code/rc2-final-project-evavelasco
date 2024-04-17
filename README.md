@@ -5,7 +5,7 @@
 # BOTICA NATURAL
 ### App de plantas medicinales y remedios
 
-Una app dirigida a personas interesadas en la medicina natural y que buscan alivio natural a dolencias comunes y de poca gravedad(dolores decabeza, estres, insomnio, problemas digestivos etc.)
+Una app dirigida a personas interesadas en la medicina natural y que buscan alivio natural a dolencias comunes y de poca gravedad(dolores de cabeza, estres, insomnio, problemas digestivos etc.)
 
 # Tecnologías utilizadas
 
@@ -34,5 +34,5 @@ npm run dev
 
 # Planificación
 
-- [Planificion de tareas en Trello](enlace)
-- [Prototipado en Figma](enlace)
+- [Planificion de tareas en Trello](https://trello.com/b/tV5SGBOo/plantas-medicinales)
+- [Prototipado en Figma](https://www.figma.com/file/pFS4dOi9VClt0bGoO8JxDG/Plantas-medicinales?type=design&node-id=0-1&mode=design&t=enaHVTUvQzJMFgAP-0)
