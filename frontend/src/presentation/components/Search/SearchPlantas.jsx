@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SearchPlantas.css";
 
-const SearchPlantas = ({ onSearch }) => {
+function SearchPlantas({ onSearch }) {
   const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
@@ -26,6 +26,6 @@ const SearchPlantas = ({ onSearch }) => {
       </button>
     </form>
   );
-};
+}
 
 export default SearchPlantas;

@@ -1,13 +1,7 @@
-:root {
-    --font-size-mobile: 0.8rem;
-    --font-size-tablet: 1rem;
-    --font-size-desktop: 1.1rem;
-}
-
 body {
-    background: url("../public/assets/fondobotica.jpg") no-repeat center center fixed;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 1);
-    height: 100vh;
+  background: url("../public/assets/fondobotica.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 1);
+  height: 100vh;
 }
-

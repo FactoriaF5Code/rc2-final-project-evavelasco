@@ -19,7 +19,6 @@ article.remedio {
   box-shadow: 0.625rem 0.625rem 0.625rem rgb(40, 154, 19);
 }
 
-
 article.remedio:hover {
   transform: scale(1.1);
 }
@@ -68,34 +67,4 @@ article.remedio:hover::before {
   padding: 0;
   margin: 0;
   opacity: 1;
-}
-
-@media only screen and (max-width: 768px) {
-  .remedio {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px; 
-  }
-
-  .front, .back {
-    padding: 10px;
-  }
-
-  .planta {
-    font-size: 14px;
-  }
-}
-
-
-@media only screen and (min-width: 769px) {
-  .remedio {
-    width: calc(33.33% - 40px); 
-    margin-right: 20px; 
-  .front, .back {
-    padding: 20px;
-  }
-
-  .planta {
-    font-size: 16px;
-  }
 }

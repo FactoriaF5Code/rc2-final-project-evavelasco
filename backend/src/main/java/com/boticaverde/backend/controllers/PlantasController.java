@@ -12,7 +12,7 @@ import com.boticaverde.backend.services.PlantasService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
-@RequestMapping("api/plantas")
+@RequestMapping("/api/plantas")
 
 public class PlantasController {
     @Autowired
