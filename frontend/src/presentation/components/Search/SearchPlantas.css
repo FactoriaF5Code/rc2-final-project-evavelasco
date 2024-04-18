@@ -1,0 +1,24 @@
+.SearchPlantas {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: end;
+}
+
+.inputPlantas {
+  width: 18.75rem;
+  padding: 0.625rem;
+  font-family: "Indie Flower";
+  border-radius: 0.3125rem;
+  background-color: #92b892;
+  margin-right: 0.625rem;
+  font-size: 1rem;
+}
+
+.buttonSearchPlantas {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  background-color: #4f7a4f;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+}

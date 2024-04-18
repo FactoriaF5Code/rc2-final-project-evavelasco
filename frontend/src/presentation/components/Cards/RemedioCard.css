@@ -1,0 +1,70 @@
+.cartaRemedios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 20px;
+}
+
+article.remedio {
+  width: 15%;
+  height: 18.75rem;
+  overflow-y: auto;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  box-shadow: 0.625rem 0.625rem 0.625rem rgb(40, 154, 19);
+}
+
+article.remedio:hover {
+  transform: scale(1.1);
+}
+
+article.remedio::before {
+  content: "";
+
+  position: absolute;
+  background-image: url("/assets/tazare.jpeg");
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+article.remedio:hover::before {
+  opacity: 0.5;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.dolencia {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  opacity: 1;
+}
+.plantas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.planta {
+  text-transform: lowercase;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+}

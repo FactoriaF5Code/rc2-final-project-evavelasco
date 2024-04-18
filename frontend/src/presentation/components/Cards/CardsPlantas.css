@@ -1,0 +1,38 @@
+.cardPlanta {
+  width: 15%;
+  height: 18.75rem;
+  font-size: 1rem;
+  font-family: "Indie Flower", cursive;
+  color: black;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #4f7a4f;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  box-shadow: 0.625rem 0.625rem 0.625rem rgb(40, 154, 19);
+  cursor: pointer;
+}
+.cartaPlanta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 20px;
+}
+.frontPlanta {
+  justify-content: center;
+  align-items: center;
+}
+
+.cardPlanta:hover {
+  transform: scale(1.1);
+}
+img.hierbas {
+  border-radius: 15px;
+}
